@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>IP Peeper | IP:{{ipaddr}} </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2 ion-text color="secondary">Welcome to IP Peeper!</h2>
+  <p>Peep others IP address, Find the location</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-card padding>
+
+            <ion-card-header>
+                <h2 style="font-weight:bolder;">Enter IP Address</h2>
+              </ion-card-header>
+        <ion-list>
+          <form (submit)="GetLocation()">
+              <ion-item>
+                  <ion-input type="text" placeholder="Eg: 172.12.15.27" [(ngModel)]="ipaddr" name="ipaddr"></ion-input>
+                </ion-item>
+                <button ion-button block color="materia" type="submit">
+                  <ion-icon name="eye"></ion-icon>
+                   &nbsp; Find
+                </button>
+          </form>
+          </ion-list>
+          </ion-card>
+      </ion-col>
+      <ion-col col-12>
+        <ion-card>
+            <ion-card-header>
+                <h2 style="font-weight:bold;">Your Current Location</h2>
+              </ion-card-header>
+              <div #gmap style=”width:100%;height:400px;”></div>
+            <ion-fab right top>
+
+            </ion-fab>
+
+            <ion-item>
+              <ion-icon name="globe" item-start large></ion-icon>
+              <h2>Server</h2>
+              <p>{{server}}</p>
+            </ion-item>
+
+            <ion-item>
+              <ion-icon name="pin" item-left large ></ion-icon>
+              <h2>City</h2>
+              <p>{{city}}</p>
+            </ion-item>
+
+            <ion-item>
+              <ion-icon name="pin" item-left large ></ion-icon>
+              <h2>State</h2>
+              <p>{{state}}</p>
+            </ion-item>
+
+            <ion-item>
+              <ion-icon name="pin" item-left large ></ion-icon>
+              <h2>Country</h2>
+              <p>{{country}}</p>
+            </ion-item>
+
+            <ion-item>
+              <ion-icon name="logo-buffer" item-left large ></ion-icon>
+              <h2>ISP</h2>
+              <p>{{isp}} </p>
+            </ion-item>
+
+            <ion-item>
+              <ion-icon name="people" item-left large ></ion-icon>
+              <h2>Organization</h2>
+              <p>{{org}}</p>
+            </ion-item>
+
+            <ion-item>
+              <ion-icon name="time" item-left large ></ion-icon>
+              <h2>Time Zone</h2>
+              <p>{{timezone}}</p>
+            </ion-item>
+          <!--
+            <ion-item>
+              <span item-left>18 min</span>
+              <span item-left>(2.6 mi)</span>
+              <button ion-button icon-left clear item-end>
+                <ion-icon name="navigate"></ion-icon>
+                Start
+              </button>
+            </ion-item>
+          -->
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<!--
+  "as": "AS55836 Reliance Jio Infocomm Limited",
+"city": "Bengaluru",
+"country": "India",
+"countryCode": "IN",
+"isp": "Jio",
+"lat": 12.9833,
+"lon": 77.5833,
+"org": "Jio",
+"query": "157.49.3.57",
+"region": "KA",
+"regionName": "Karnataka",
+"status": "success",
+"timezone": "Asia/Kolkata",
+
+
+MAPS API KEY:  AIzaSyCcDBEGtYohQp4lgYVDRcNMNsJZ211df_k
+-->
