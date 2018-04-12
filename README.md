@@ -9,6 +9,7 @@ IP Peeper is a **IP address location finder** developed using **IONIC Native, An
 
 - NODE JS and IONIC Native
 - Android SDK or IOS SDK or Windows SDK (Cross Platform)
+- Create API Key for Google Maps API JavaScript 
 
 ##  Used Libraries
 
@@ -22,6 +23,8 @@ IP Peeper is a **IP address location finder** developed using **IONIC Native, An
     //clone the package
     npm install
     ionic serve
+    //Add folowing script inside index.html
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" type="text/javascript"></script>
 
 ```
 
