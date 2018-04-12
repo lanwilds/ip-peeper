@@ -2,8 +2,7 @@
 
 IP Peeper is a **IP address location finder** developed using **IONIC Native, Angular 5**.
 
-[![1.0](https://img.shields.io/packagist/v/intervention/image.svg)](https://github.com/lanwilds/ip-peeper)
-[![1.0]()]
+Version 1.0
 
 ## Requirements
 
